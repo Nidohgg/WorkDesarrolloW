@@ -6,8 +6,63 @@
     <title>Contacto</title>
 </head>
 <body>
+    <img src="imagenes/surveillance-147831_640.png" width="50px" height="50px" alt="Logo">
+    <h1>Your security</h1>
+
     <h1>Contacto</h1>
     <a href="#pie">Ir al pie de la pagina</a><!--Prueba de enlaces (links)-->
+
+    <ul>
+        <li>
+            <a href="productos.html">Productos</a>
+        </li>
+        <li>
+            <a href="servicios.html">Servicios</a>
+        </li>
+        <li>
+            <a href="nosotros.html">Nosotros</a>
+        </li>
+        <li>
+            <a href="contacto.html">Contacto</a>
+        </li>
+    </ul>
+    <h2>Nuestra prioridad es tu seguridad.</h2>
+    
+    <form >
+        <!--Nombre y apellido-->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"> <br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"> <br>
+        
+        <!--MAIL-->
+        <label for="mail">Mail:</label>
+        <input type="text" id="mail" name="mail"> <br>
+
+        <!--Genero-->
+        <div>Genero:</div>
+
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino"><br>
+
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino"><br>
+
+        <label for="otro">Otro</label> 
+        <input type="radio" id="otro" name="genero" value="otro"><br>
+
+        <!--Aceptar terminos y condiciones-->
+        <label for="acepta">Aceptar terminos y condiciones</label>
+        <input type="checkbox" id="acepta" name="acepta" value="1"><br>
+
+        <!--Botones de formulario-->
+        <input type="submit" value="Enviar formulario">
+        <input type="reset" value="Limpiar formulario">
+        <input type="button" value="Sin acciones">
+    </form>
+
+
 
     <footer id="#pie">
         <a href="index.html">Inicio.</a>
