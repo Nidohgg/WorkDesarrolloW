@@ -1,0 +1,89 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+section{
+    background-color: red;
+    padding: 10px 30px 10px 30px;
+}
+
+section ul{
+    background-color: pink;
+    list-style-type: none;
+}
+
+section h3{
+    background-color: greenyellow;
+}
+
+h2{
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+#inicioFondo{
+    background-color: blueviolet;
+    background-image: url(./imagenes/camarasFondo.jpg);
+    background-size:cover; 
+    background-repeat: no-repeat;
+    height: 50%
+}
+
+.centrar{
+    text-align: center;
+}
+
+form{
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+    background-image: ;
+    padding: 45px 150px 45px 150px;
+}
+
+form input{
+    width: 100%;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+form input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+form textarea{
+    width: 100%;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+form textarea::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+form #enviar{
+    background-color: rgb(63, 63, 60);
+    font-size: 25px;
+    border: 2px solid;
+    padding: 10px;
+}
+
+footer{
+    background-color: rgb(191, 187, 187);
+}
