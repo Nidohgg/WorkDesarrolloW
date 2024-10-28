@@ -4,32 +4,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "Rubik";
+    src: url(./fonts/Rubik/static/Rubik-Light.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
 
 body{
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+    display: flex;
+    flex-direction: column;
 }
 
+main{
+    display: flex;
+}
 
 section{
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    display: inline-block;
     background-color: red;
-    padding: 10px 30px 10px 30px;
+    font-family: "Rubik";
 }
 
-section ul{
+section h1{
+    background-color: greenyellow;
+    text-transform: uppercase;
+}
+
+ul{
     background-color: pink;
     list-style-type: none;
+    text-align: center;
 }
 
-section h3{
-    background-color: greenyellow;
+li{
+    display: inline;
 }
 
 h2{
     text-align: center;
     font-size: 45px;
+    font-weight: 900;
     text-transform: uppercase;
 }
 
@@ -54,22 +72,33 @@ form{
     background-position:  bottom 25px top 10px;
     background-repeat: no-repeat;
     padding: 45px 150px 45px 150px;
+    font-family: "Rubik";
+    overflow: hidden;
+}
+
+form label{
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
 }
 
 form input{
     width: 100%;
-    font-size: 22px;
+    font-size: 19px;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 form input::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Rubik";
 }
 
 form textarea{
     width: 100%;
+    height: 150px;
+    resize: horizontal;
     font-size: 22px;
     background-color: transparent;
     border: none;
@@ -77,16 +106,45 @@ form textarea{
 }
 
 form textarea::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Rubik";
 }
 
 form #enviar{
     width: 100%;
     background-color: rgb(63, 63, 60);
     font-size: 25px;
+    font-weight: 700;
     text-transform: uppercase;
-    border-radius: 8px;
+    border-radius: 25px;
     padding: 10px;
+}
+
+.fijo{
+    width: 110px;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    bottom: 10px;
+    right: 5px;
+    text-align: center;
+    line-height: 57px;
+}
+#asistente{
+    width: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 85%;
+}
+
+#arriba{
+    width: 50px;
+    border-radius: 85%;
+    background-color: black;
+    color: white;
+    font-size: 40px;
 }
 
 footer{
