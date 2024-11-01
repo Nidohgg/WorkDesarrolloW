@@ -82,7 +82,7 @@ a{
 
 #contacto{
     background-color: grey;
-    background-image: linear-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5)),url(./imageneS/camarasFondo.jpg);
+    background-image: linear-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5)),url(./imagenes/camarasFondo.jpg);
     background-size: cover;
     background-position:  bottom 25px top 10px;
     background-repeat: no-repeat;
