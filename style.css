@@ -17,31 +17,38 @@ body{
     flex-direction: column;
 }
 
-main{
-    display: flex;
-}
-
-section{
+header{
+    background-color: rgb(0, 0, 0);
+    height: 80px;
     width: 100%;
-    padding: 5px 5px 5px 5px;
-    display: inline-block;
-    background-color: red;
+    padding: 8px;
     font-family: "Rubik";
 }
 
-section h1{
-    background-color: greenyellow;
-    text-transform: uppercase;
+.logo{
+    float: left;
+    color: white;
+    font-weight: 900;
+    font-size: 37px;
 }
 
-ul{
-    background-color: pink;
-    list-style-type: none;
-    text-align: center;
+.barra{
+    float: right;
+    font-weight: 600;
+    font-size: 20px;
 }
 
-li{
-    display: inline;
+.barra ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.barra a{
+    color: white;
+}
+
+.barra a:hover{
+    color: grey;
 }
 
 h2{
@@ -51,6 +58,16 @@ h2{
     text-transform: uppercase;
 }
 
+main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+
+a{
+    text-decoration: none;
+}
 #inicioFondo{
     background-color: blueviolet;
     background-image: url(./imagenes/camarasFondo.jpg);
@@ -63,15 +80,17 @@ h2{
     text-align: center;
 }
 
-form{
-    width: 100%;
-    height: 100vh;
+#contacto{
     background-color: grey;
     background-image: linear-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5)),url(./imageneS/camarasFondo.jpg);
     background-size: cover;
     background-position:  bottom 25px top 10px;
     background-repeat: no-repeat;
-    padding: 45px 150px 45px 150px;
+}
+
+form{
+    width: 100%;
+    padding: 45px 250px 45px 250px;
     font-family: "Rubik";
     overflow: hidden;
 }
