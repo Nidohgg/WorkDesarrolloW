@@ -1,0 +1,87 @@
+
+.call{
+    background-color: red;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.655), rgba(255, 255, 255, 0.655)),url(../imagenes/camaraFondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 220px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-family: "Rubik";
+}
+
+.call h1{
+    color: black;
+    font-family: "Rubik";
+    font-weight:900;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px black;
+    padding-bottom: 35px;
+}
+
+.call p{
+    font-size: 18px;
+}
+
+h2{
+    font-family: "Rubik";
+    font-size: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 1320px;
+}
+.card{
+    width: 97%;
+    height: 425px;
+    background-color: white;
+    border: 1px solid black;
+    /*border-radius: 10px;*/
+    /*box-shadow: 2px 2px 5px black;*/
+    font-family: "Rubik";
+    text-align: center;
+}
+
+.card-img{
+    height: 250px;
+    width: 100%;
+    background-image: url(../imagenes/Service.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3{
+    color: black;
+    font-size: 19px;
+    padding-top: 5px;
+}
+
+.card p{
+    color: black;
+    font-size: 17px;
+    text-align: justify;
+    padding: 10px 10px 28px 10px;
+}
+
+.card a{
+    background-color: black;
+    color: white;
+    padding: 5px 19px 5px 19px;
+    border-radius: 6px;
+}
+

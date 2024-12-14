@@ -1,0 +1,214 @@
+
+/*Quita el espacio de los bordes. (margin y padding)*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilo de fuente*/
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik/static/Rubik-Light.ttf);
+}
+
+/*Efecto de recarga de pagina*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    height: 180px;
+    width: 100%;
+    padding: 8px;
+    font-family: "Rubik";
+}
+
+.logo{
+    float: left;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    padding-right: 25px;
+}
+
+.logo img{
+    width: 25px;
+    height: 25px;
+}
+
+/*la direcciones a las demas paginas se ubican a la derecha dentro de header*/
+.barra{
+    float: right;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+/*Quita el diseño default que tienen las listas*/
+ul li{
+    list-style: none;
+    display: block;
+    padding-bottom: 7px;
+}
+
+.barra a{
+    transition: color 0.5s ease;
+}
+
+.barra a:hover{
+    color: grey;
+}
+
+/*contenedor main*/
+main{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*BOTONES FIJOS EN LA PANTALLA*/
+.fijo{
+    width: 110px;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    bottom: 10px;
+    right: 5px;
+    text-align: center;
+    line-height: 57px;
+}
+
+/*permite al usuario hablar con asistente virtual*/
+#asistente{
+    width: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 85%;
+}
+
+/*Efecto al pasar el mouse por encima */
+#asistente:hover{
+    color: gray;
+    transition: color 0.5s ease, transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+/*Envia al usuario al incio de la pagina*/
+#arriba{
+    width: 50px;
+    border-radius: 85%;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+}
+
+/*Efecto al pasar el mouse por encima */
+#arriba:hover{
+    color: gray;
+    transition: color 0.5s ease, transform 0.3s ease;
+    transform: scale(1.1);
+}
+/*-----------------------------------------------------------*/
+
+/*COMIENZO DE PREFOOTER*/
+.preFooter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Rubik";
+    font-size: 20px;
+    text-align: center;
+}
+
+.redes{
+    margin-top: 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.redes i{
+    letter-spacing: 20px;
+}
+
+.redes i:hover{
+    color: grey;
+    transition: color, 0.5s ease;
+}
+
+/*Linea para divir del footer*/
+hr{
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+/*FIN PREFOOTER*/
+
+
+
+/*COMIENZO DEL FOOTER*/
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Rubik";
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.footerContenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+footer ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li{
+    padding-right: 10px;
+}
+
+.footerContenido a:hover{
+    color: grey;
+    transition: color, 0.5s ease;
+}
+
+.logoFooter{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*FIN FOOTER*/
