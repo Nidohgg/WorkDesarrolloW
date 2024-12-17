@@ -87,11 +87,11 @@ a{
 
 /*BOTONES FIJOS EN LA PANTALLA*/
 .fijo{
-    width: 110px;
-    height: 50px;
-    position: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 53px;
+    height: 110px;
+    position: fixed;
     justify-content: space-evenly;
     bottom: 10px;
     right: 5px;
@@ -102,6 +102,7 @@ a{
 /*permite al usuario hablar con asistente virtual*/
 #asistente{
     width: 50px;
+    height: 50px;
     background-color: black;
     color: white;
     border-radius: 85%;
@@ -117,6 +118,7 @@ a{
 /*Envia al usuario al incio de la pagina*/
 #arriba{
     width: 50px;
+    height: 50px;
     border-radius: 85%;
     background-color: black;
     color: white;
@@ -135,22 +137,56 @@ a{
 .preFooter{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     background-color: rgb(0, 0, 0);
     color: white;
     font-family: "Rubik";
-    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logoFooter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.redes{
-    margin-top: 15px;
-    font-size: 25px;
+/*Personaliza el contenido dentro del prefooter*/
+.preFooterContenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.preFooterContenido div{
+    margin: 10px 20px;
+}
+
+.preFooterContenido h4 {
+    margin: 6px 0;
+}
+
+.preFooterContenido a {
+    text-decoration: none;
     color: white;
+    transition: color 0.3s ease;
+}
+
+.preFooterContenido a:hover {
+    color: gray;
 }
 
 .redes i{
-    letter-spacing: 20px;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
 }
 
 .redes i:hover{
@@ -158,40 +194,35 @@ a{
     transition: color, 0.5s ease;
 }
 
+/*FIN PREFOOTER*/
+
 /*Linea para divir del footer*/
 hr{
     border: none;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.4);
 }
-/*FIN PREFOOTER*/
-
-
 
 /*COMIENZO DEL FOOTER*/
 footer{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(0, 0, 0);
+    align-items: left;
+    background-color: black;
     color: white;
     font-family: "Rubik";
-    padding: 10px;
-    font-size: 15px;
-    text-align: center;
+
 }
 
 .footerContenido{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    padding: 10px;
+    font-size: 15px;
+    text-align: left;
     width: 100%;
 }
 
+
 footer ul{
-    display: flex;
     padding: 0;
     margin: 0;
 }
@@ -205,10 +236,5 @@ footer ul li{
     transition: color, 0.5s ease;
 }
 
-.logoFooter{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
 /*FIN FOOTER*/
