@@ -77,8 +77,26 @@ main{
     width: 100%;
     background-color: white;
     color: black;
+    font-family: "Rubik";
 }
 
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Rubik";
+    color: black;
+    padding: 20px;
+}
+
+.titulo h1{
+    font-size: 25px;
+}
+
+.titulo p{
+    padding-top: 15px;
+    font-size: 17px;
+}
 
 a{
     text-decoration: none;
@@ -147,10 +165,8 @@ a{
 
 .logoFooter{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 /*Personaliza el contenido dentro del prefooter*/
@@ -238,3 +254,104 @@ footer ul li{
 
 
 /*FIN FOOTER*/
+
+/*INICIO MEDIA QUERIES*/
+@media screen and (min-width: 600px) {
+    header{
+        height: 115px;
+    }
+
+    ul li{
+        display: inline-block;
+        list-style: none;
+    }
+
+    .footerContenido{
+        padding: 10px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 80px;
+    }
+
+    header .logo{
+        font-size: 30px;
+    }
+    .preFooterContenido{
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 17px;
+    }
+
+    .redes i{
+        font-size: 2rem;
+    }
+
+    .preFooterContenido ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerContenido{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 80px;
+    }
+
+    header .logo{
+        font-size: 30px;
+    }
+    .preFooterContenido{
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 17px;
+    }
+    .redes{
+        display: flex;
+        align-items: center;
+    }
+
+    .redes i{
+        font-size: 2rem;
+    }
+
+    .preFooterContenido ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerContenido{
+        width: 100%;
+    }
+
+    .footerContenido ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

@@ -1,22 +1,6 @@
 
 /*PAGINA "NOSOTROS"*/
-.titulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Rubik";
-    color: black;
-    padding: 20px;
-}
 
-.titulo h1{
-    font-size: 18px;
-}
-
-.titulo p{
-    padding-top: 15px;
-    font-size: 17px;
-}
 
 .contenedor{
     display: grid;
@@ -27,25 +11,49 @@
 }
 
 .item{ 
+    position: relative;/*Permite que los elementos hijos como el texto estén posicionados respecto al contenedor.*/
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.item::before{
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;/*Tamaño proporcional del encuadre*/
+    height: 90%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s ease;
+}
+
+.item:hover::before{
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .item p{
-    padding-top: 30px;
+    position: relative; /*para que este encima del fondo*/
     color: black;
     text-align: center;
     font-family: "Rubik";
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 900;
+    font-size: 20px;
+    opacity: 0; /*Oculta el texto*/
+    transition: opacity 0.3s ease;
 }
 
+.item:hover p{
+    opacity: 1;/*Muestras el texto al pasar el mouse*/
+}
+
+/*IMAGENES DE LOS ITEMS*/
 .item1{
     background-image: url(../imagenes/BancoSanJuan-logo.jpg);
 }
@@ -78,16 +86,51 @@
     background-image: url(../imagenes/globant.jpg);
 }
 
-
-.texto{
+.contenedorTexto {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
+}
+
+.texto{
     font-family: "Rubik";
-    font-size: 35px;
+    font-size: 20px;
+    text-align: center;
     color: black;
-    padding: 38px 0 0 0 ;
+    width: 100%;
 }
 
 /*--------------------------*/
+/*INICIO DE MEDIA QUERIES*/
 
+@media screen and (min-width: 600px) {
+
+    .contenedor{
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(4, 200px);
+        
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .contenedor{
+        grid-template-columns: repeat(3,33%);
+        grid-template-rows: repeat(4, 250px);
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .contenedor{
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows: repeat(2, 250px);
+        padding: 0 20px 0 20px;
+    }
+
+    .titulo h1{
+        font-size: 35px;
+    }
+    .titulo p{
+        font-size: 20px;
+    }
+}

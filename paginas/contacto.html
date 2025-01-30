@@ -36,26 +36,33 @@
         </nav>
     </header>
 
-    <main id="contacto">
-        <form name="contactoform" method="POST"><!--data-netlify="true"-->
+    <main>
+        <div class="titulo">
             <h1>Contacto</h1>
-            <!--Nombre y apellido-->
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" placeholder="Ingrese su nombre..."/> <br/><br>
-    
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" placeholder="Ingrese su apellido..."/> <br/><br>
-            <!--MAIL-->
-            <label for="mail">Mail</label>
-            <input type="email" name="mail" placeholder="Ingrese su correo electronico..." /> <br/><br>
-            <!--Telefono-->
-            <label for="telefono">Telefono</label>
-            <input type="number" name="telefono" id="telefono" placeholder="Ingrese su N° telefono..."> <br><br>
-    
-            <textarea name="comentarios" id="comentarios" cols="30" rows="7" placeholder="¿Tienes alguna consulta? Escribela aquí..."></textarea> <br>
-            <!--Botones de formulario-->
-            <button type="submit" name="enviar" id="enviar">enviar</button>
-        </form>
+        </div>
+
+        <div class="contenedorForm">
+            <form name="contactoform" method="POST"><!--data-netlify="true"-->
+
+                <!--Nombre y apellido-->
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre..."/> <br/><br>
+        
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" placeholder="Ingrese su apellido..."/> <br/><br>
+                <!--MAIL-->
+                <label for="mail">Mail</label>
+                <input type="email" name="mail" placeholder="Ingrese su correo electronico..." /> <br/><br>
+                <!--Telefono-->
+                <label for="telefono">Telefono</label>
+                <input type="number" name="telefono" id="telefono" placeholder="Ingrese su N° telefono..."> <br><br>
+        
+                <textarea name="comentarios" id="comentarios" cols="30" rows="7" placeholder="¿Tienes alguna consulta? Escribela aquí..."></textarea> <br>
+                <!--Botones de formulario-->
+                <button type="submit" name="enviar" id="enviar">enviar</button>
+            </form>
+        </div>
+        
     </main>
     
     <div class="fijo">
