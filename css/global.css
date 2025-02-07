@@ -5,39 +5,42 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /*Estilo de fuente*/
 @font-face {
     font-family: "Rubik";
     src: url(../fonts/Rubik/static/Rubik-Light.ttf);
 }
 
+:is(header, main, .titulo, .preFooter, footer){
+    font-family: "Rubik";
+}
+
+:is(body, header){
+    display: flex;
+    flex-direction: column;
+}
 /*Efecto de recarga de pagina*/
 html{
     scroll-behavior: smooth;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-}
-
 header{
-    display: flex;
-    flex-direction: column;
     background-color: rgb(0, 0, 0);
     align-items: center;
     height: 180px;
     width: 100%;
     padding: 8px;
-    font-family: "Rubik";
+}
+
+/*comparten estilos*/
+:is(.logo, .barra){
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .logo{
     float: left;
     color: white;
-    font-weight: 900;
-    font-size: 20px;
     padding-right: 25px;
 }
 
@@ -46,19 +49,17 @@ header{
     height: 25px;
 }
 
-/*la direcciones a las demas paginas se ubican a la derecha dentro de header*/
-.barra{
-    float: right;
-    font-weight: 600;
-    font-size: 20px;
-    padding-top: 20px;
-}
-
 /*Quita el diseño default que tienen las listas*/
 ul li{
     list-style: none;
     display: block;
     padding-bottom: 7px;
+}
+
+/*la direcciones a las demas paginas se ubican en medio (menu desplegable)*/
+.barra{
+    float: right;
+    padding-top: 20px;
 }
 
 .barra a{
@@ -69,38 +70,36 @@ ul li{
     color: grey;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 /*contenedor main*/
-main{
-    display:flex;
+:is(main, .titulo){
+    display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    color: black;
+}
+
+main{
+    min-height: 80vh;
     width: 100%;
     background-color: white;
-    color: black;
-    font-family: "Rubik";
 }
 
 .titulo{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    font-family: "Rubik";
-    color: black;
     padding: 20px;
 }
 
 .titulo h1{
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .titulo p{
     padding-top: 15px;
     font-size: 17px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
 }
 
 /*BOTONES FIJOS EN LA PANTALLA*/
@@ -117,48 +116,44 @@ a{
     line-height: 57px;
 }
 
-/*permite al usuario hablar con asistente virtual*/
-#asistente{
+:is(#asistente, #arriba){
     width: 50px;
     height: 50px;
+    border-radius: 85%;
     background-color: black;
     color: white;
-    border-radius: 85%;
 }
 
 /*Efecto al pasar el mouse por encima */
-#asistente:hover{
+:is(#asistente:hover, #arriba:hover){
     color: gray;
     transition: color 0.5s ease, transform 0.3s ease;
     transform: scale(1.1);
+}
+
+/*permite al usuario hablar con asistente virtual*/
+#asistente{
+    font-size: 23px;
 }
 
 /*Envia al usuario al incio de la pagina*/
 #arriba{
-    width: 50px;
-    height: 50px;
-    border-radius: 85%;
-    background-color: black;
-    color: white;
     font-size: 40px;
 }
 
-/*Efecto al pasar el mouse por encima */
-#arriba:hover{
-    color: gray;
-    transition: color 0.5s ease, transform 0.3s ease;
-    transform: scale(1.1);
-}
 /*-----------------------------------------------------------*/
 
 /*COMIENZO DE PREFOOTER*/
-.preFooter{
+
+:is(.preFooter, .preFooterContenido){
     display: flex;
     flex-direction: column;
+}
+
+.preFooter{
     align-items: center;
     background-color: rgb(0, 0, 0);
     color: white;
-    font-family: "Rubik";
     text-align: center;
     padding: 20px 0;
 }
@@ -171,8 +166,6 @@ a{
 
 /*Personaliza el contenido dentro del prefooter*/
 .preFooterContenido{
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: nowrap;
     width: 100%;
@@ -184,32 +177,20 @@ a{
     margin: 10px 20px;
 }
 
-.preFooterContenido h4 {
+.preFooterContenido h4{
     margin: 6px 0;
 }
 
-.preFooterContenido a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.preFooterContenido a:hover {
+/*Color de redes y enlaces del footer*/
+:is(.preFooterContenido a:hover, .redes i:hover){
     color: gray;
+    transition: color, 0.5s ease;
 }
 
 .redes i{
     margin-right: 15px;
     font-size: 1.5rem;
-    color: white;
-    transition: color 0.3s ease;
 }
-
-.redes i:hover{
-    color: grey;
-    transition: color, 0.5s ease;
-}
-
 /*FIN PREFOOTER*/
 
 /*Linea para divir del footer*/
@@ -226,8 +207,6 @@ footer{
     align-items: left;
     background-color: black;
     color: white;
-    font-family: "Rubik";
-
 }
 
 .footerContenido{
@@ -236,7 +215,6 @@ footer{
     text-align: left;
     width: 100%;
 }
-
 
 footer ul{
     padding: 0;
@@ -251,12 +229,10 @@ footer ul li{
     color: grey;
     transition: color, 0.5s ease;
 }
-
-
 /*FIN FOOTER*/
 
 /*INICIO MEDIA QUERIES*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 480px) {
     header{
         height: 115px;
     }
@@ -271,7 +247,6 @@ footer ul li{
         font-size: 15px;
         width: 100%;
     }
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

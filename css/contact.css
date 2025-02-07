@@ -7,10 +7,16 @@ main{
     background-repeat: no-repeat;
 }
 
-form{
+.contenedorForm{
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+form{
+    width: 100%;
 }
 
 form label{
@@ -58,6 +64,7 @@ form #enviar{
     text-transform: uppercase;
     border-radius: 25px;
     padding: 10px;
+    margin-top: 15px;
 }
 
 #enviar:hover{
@@ -65,4 +72,42 @@ form #enviar{
     background-color: black;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease-in-out;   
     transform: scale(1.05);
+}
+
+/*COMIENZO DE MEDIA QUERIES*/
+@media screen and (min-width: 480px) {
+    form{
+      width: 90%;  
+    }
+
+    form label{
+        font-size: 21px;
+    }
+    :is(form input, form textarea){
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    form{
+        width: 70%;
+    }
+    form label{
+        font-size: 23px;
+    }
+    :is(form input, form textarea){
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    form{
+        width: 50%;
+    }
+    form label{
+        font-size: 26px;
+    }
+    :is(form input, form textarea){
+        font-size: 24px;
+    }
 }
