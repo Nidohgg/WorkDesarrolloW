@@ -33,11 +33,6 @@ html{
 /*FIn NAVBAR*/
 
 /*Quita el diseño default que tienen las listas*/
-ul li{
-    list-style: none;
-    display: block;
-    padding-bottom: 7px;
-}
 
 a{
     text-decoration: none;
@@ -45,19 +40,16 @@ a{
 }
 
 /*contenedor main*/
-:is(main, .titulo){
+ .titulo{
     display: flex;
     flex-direction: column;
     color: black;
-}
-
-.titulo{
     align-items: center;
-    padding: 20px;
 }
 
 .titulo h1{
     font-size: 35px;
+    font-weight: 900;
 }
 
 .titulo p{
@@ -119,13 +111,14 @@ a{
     font-size: 2rem;
 }
 
-/*Color de redes y enlaces del footer*/
+/*Color de redes y enlaces del prefooter*/
 :is(.preFooter a:hover, .redes i:hover){
     color: gray;
     transition: color, 0.5s ease;
 }
 
 /*FIN PREFOOTER*/
+
 /*COMIENZO DEL FOOTER*/
 footer{
     display: flex;
@@ -134,62 +127,4 @@ footer{
     background-color: black;
     color: white;
 }
-
-.footerContenido{
-    padding: 10px;
-    font-size: 15px;
-    text-align: left;
-    width: 100%;
-}
-
-footer ul{
-    padding: 0;
-    margin: 0;
-}
-
-footer ul li{
-    padding-right: 10px;
-}
-
-.footerContenido a:hover{
-    color: grey;
-    transition: color, 0.5s ease;
-}
 /*FIN FOOTER*/
-
-/*INICIO MEDIA QUERIES*/
-@media screen and (min-width: 480px) {
-
-    ul li{
-        display: inline-block;
-        list-style: none;
-    }
-
-    .footerContenido{
-        padding: 10px;
-        font-size: 15px;
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-    .footerContenido{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
-
-@media only screen and (min-width: 1024px){
-
-    .footerContenido{
-        width: 100%;
-    }
-
-    .footerContenido ul{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-}
