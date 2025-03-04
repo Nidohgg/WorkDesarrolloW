@@ -63,6 +63,11 @@ form #enviar{
     transform: scale(1.05);
 }
 
+.boton{
+    transform:ro
+}
+
+
 /*COMIENZO DE MEDIA QUERIES*/
 
 @media screen and (min-width: 480px) {

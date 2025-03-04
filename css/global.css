@@ -33,7 +33,6 @@ html{
 /*FIn NAVBAR*/
 
 /*Quita el diseño default que tienen las listas*/
-
 a{
     text-decoration: none;
     color: white;
@@ -45,6 +44,19 @@ a{
     flex-direction: column;
     color: black;
     align-items: center;
+
+}
+
+:is(main){
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;/*mantiene el restado final de la animacion*/
+}
+
+@keyframes aparecer{
+    0% {opacity: 0; }
+    100% {opacity: 1; }
 }
 
 .titulo h1{
@@ -104,19 +116,24 @@ a{
     font-family: "Rubik";
     background-color: black;
     color: white;
+    transition: all 0.5s;
 }
 
 .redes i{
     margin-right: 15px;
     font-size: 2rem;
+    transition: all 0.3s;
 }
 
 /*Color de redes y enlaces del prefooter*/
-:is(.preFooter a:hover, .redes i:hover){
-    color: gray;
-    transition: color, 0.5s ease;
+.redes i:hover{
+    font-size: 37px;
 }
 
+.preFooter a:hover{
+    color: gray;
+    font-size: 17px;
+}
 /*FIN PREFOOTER*/
 
 /*COMIENZO DEL FOOTER*/
